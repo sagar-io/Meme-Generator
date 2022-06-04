@@ -1,0 +1,133 @@
+:root {
+    --first-clr: rgba(0, 191, 255, 0.628);
+    --second-clr: rgb(35, 0, 149);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    user-select: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main-header {
+    background: var(--first-clr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header--heading {
+    color: var(--second-clr);
+}
+
+.user-interactions {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-field input {
+    margin-right: 1rem;
+    display: block;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-indent: 1rem;
+}
+
+.generate-img-btn {
+    padding: 0.7em;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 16px groove var(--second-clr);
+    transition: 0.8s;
+}
+
+.generate-img-btn:hover {
+    opacity: 0.6;
+}
+
+.showcase {
+    width: 90%;
+    margin: auto;
+}
+
+.meme-items {
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+}
+
+.meme-img {
+    width: 100%;
+    display: block;
+    margin-top: 1rem;
+}
+
+.top-text,
+.bottom-text {
+    position: absolute;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
+.top-text {
+    top: 0;
+}
+
+.bottom-text {
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 550px) {
+    .user-interactions {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .generate-img-btn {
+        margin-top: 1rem;
+    }
+
+    .input-field input {
+        margin-right: 0;
+    }
+}
