@@ -9,13 +9,13 @@ change text and generate different images according to your preferances.
 
 ## Screenshot
 
-![](./screenshots/mobile-screenshot.jpg)
+![screenshot](./screenshots/mobile-screenshot.jpg)
 ![](./screenshots/pc-screenshot.jpg)
 
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://meme-generator-io.netlify.app/)
+- Live Site URL: [Meme Generator App](https://meme-generator-io.netlify.app/)
 
 ## My process
 
