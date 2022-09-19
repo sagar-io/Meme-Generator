@@ -9,7 +9,7 @@ change text and generate different images according to your preferances.
 
 ## Screenshot
 
-![](./screenshots/mobile-screenshot.jpg)
+![](/screenshots/mobile-screenshot.jpg)
 <br/><br/>
 ![](screenshots/pc-screenshot.jpeg)
 
