@@ -11,7 +11,7 @@ change text and generate different images according to your preferances.
 
 ![](./screenshots/mobile-screenshot.jpg)
 <br/><br/>
-![](/screenshots/pc-screenshot.jpg)
+![](screenshots/pc-screenshot.jpeg)
 
 
 ### Links
@@ -34,7 +34,6 @@ change text and generate different images according to your preferances.
 - I have learnt some basics about Canvas.
 - I have learnt how to make download functionality for a ReactJS elements using html2canvas
 
-To see how you can add code snippets, see below:
 
 ```ReactJS
 const canvas = html2canvas(
@@ -51,4 +50,4 @@ const canvas = html2canvas(
 
 ## Author
 
-- Website - [Sagar Sharma](https://www.your-site.com)
+- Website - [Sagar Sharma]()
