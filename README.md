@@ -9,8 +9,9 @@ change text and generate different images according to your preferances.
 
 ## Screenshot
 
-![screenshot](./screenshots/mobile-screenshot.jpg)
-![](./screenshots/pc-screenshot.jpg)
+![](./screenshots/mobile-screenshot.jpg)
+<br/><br/>
+![](/screenshots/pc-screenshot.jpg)
 
 
 ### Links
