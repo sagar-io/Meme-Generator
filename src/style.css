@@ -1,133 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 :root {
-    --first-clr: rgba(0, 191, 255, 0.628);
-    --second-clr: rgb(35, 0, 149);
+  --first-clr: rgba(7, 8, 37, 0.527);
+  --second-clr: rgb(235, 233, 245);
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    user-select: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: rgba(80, 14, 167, 0.753);
+}
+
+.app-wrapper {
+  background-color: black;
+  background: url("./images/bg-4.jpg") center repeat;
+  background-size: contain;
 }
 
 .main-header {
-    background: var(--first-clr);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: var(--first-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .header--heading {
-    color: var(--second-clr);
+  font-family: "Lobster", cursive;
+  color: var(--second-clr);
+  margin-left: 1rem;
+  text-shadow: 2px 1px 8px black;
+  height: 8vh;
 }
 
-.user-interactions {
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.input-field input {
-    margin-right: 1rem;
-    display: block;
-    padding: 1rem;
-    font-size: 1.2rem;
-    text-indent: 1rem;
-}
-
-.generate-img-btn {
-    padding: 0.7em;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    border: 16px groove var(--second-clr);
-    transition: 0.8s;
-}
-
-.generate-img-btn:hover {
-    opacity: 0.6;
+.header--logo {
 }
 
 .showcase {
-    width: 90%;
-    margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.user-interactions {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-field {
+  margin-bottom: 3rem;
+}
+
+.input-field input {
+  background-color: rgba(248, 248, 255, 0.637);
+  display: block;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-indent: 1rem;
+  margin-bottom: 0.3rem;
+  border: 2px groove black;
+  color: black;
+  font-weight: bold;
+  border-radius: 7px;
+}
+
+.input-field input:focus {
+  background-color: rgba(80, 14, 167, 0.753);
+  color: #fff;
+}
+
+.generate-img-btn,
+.download-btn {
+  font-family: fantasy;
+  letter-spacing: 0.9px;
+  word-spacing: 2px;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  border-radius: 3px;
+}
+
+.generate-img-btn {
+  font-size: 1.4rem;
+  padding: 0.7em;
+  position: relative;
+  border: 8px inset gray;
+  box-shadow: 0 0 8px 0px gray;
+  transition: 0.35s;
+  overflow: hidden;
+}
+
+.generate-img-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(7, 14, 3, 0.575);
+  transform: translateX(-120%);
+  transition: 0.8s;
+}
+
+.generate-img-btn:hover::after {
+  transform: translateX(0);
+}
+.download-btn {
+  padding: 0.5em;
+  font-size: 1.2rem;
+  margin-top: 0.6rem;
+  color: rgb(165, 40, 165);
+  border: 6px groove currentColor;
+  box-shadow: 0 0 12px -2px gray;
+  transition: 0.35s;
+}.download-btn:hover {
+   transform: scale(1.03);
+}
+
+.showcase {
+  width: 90%;
+  margin: auto;
 }
 
 .meme-items {
-    position: relative;
-    max-width: 500px;
-    margin: auto;
+  background: transparent;
+  margin: 1rem auto;
+  padding: 1rem auto;
+  position: relative;
+  max-width: 650px;
+  /* min-height: auto; */
+  min-height: auto;
 }
-
 .meme-img {
-    width: 100%;
-    display: block;
-    margin-top: 1rem;
+  width: 100%;
+  height: auto;
 }
-
 .top-text,
 .bottom-text {
-    position: absolute;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #fff;
-    width: 100%;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    text-shadow:
-        2px 2px 0 #000,
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        0 2px 0 #000,
-        2px 0 0 #000,
-        0 -2px 0 #000,
-        -2px 0 0 #000,
-        2px 2px 5px #000;
+  position: absolute;
+  z-index: 15;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #fff;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
 }
 
 .top-text {
-    top: 0;
+  top: 0;
 }
 
 .bottom-text {
-    bottom: 0;
+  bottom: 0;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 550px) {
-    .user-interactions {
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    .generate-img-btn {
-        margin-top: 1rem;
-    }
-
-    .input-field input {
-        margin-right: 0;
-    }
+/* ------------------------------------------------------------------ */
+@media (max-width: 768px) {
+.showcase {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
 }
+.app-wrapper {
+  background: url("./images/bg-4.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.user-interactions {
+  margin-top: 2rem;
+  height: auto;
+}
+
+.input-field {
+  margin-bottom: 2rem;
+}
+
+.input-field input {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  text-indent: 0;
+}
+
+.generate-img-btn {
+  font-size: 1.2rem;
+  border: 6px inset gray;
+  box-shadow: 0 0 8px -2px gray;
+}
+
+.download-btn {
+  font-size: 1rem;
+  border: 5px groove currentColor;
+}
+
+.meme-items {
+  max-width: 500px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+}
+
+@media (max-width: 650px) {
+  .meme-items {
+    max-width: 450px;
+  }
+  }
+
+
+  @media (max-width: 550px) {
+    .meme-items {
+      max-width: 350px;
+    }
+    }
+    
+   @media (max-width: 400px) {
+      .meme-items {
+        max-width: 300px;
+      }
+      }

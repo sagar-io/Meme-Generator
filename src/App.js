@@ -4,9 +4,9 @@ import './style.css'
 
 export default function App() {
     return (
-    <>
+    <div className='app-wrapper'>
         <Header />
         <Showcase />
-    </>
+    </div>
     )
 }
