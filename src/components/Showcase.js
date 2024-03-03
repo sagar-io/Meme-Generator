@@ -13,13 +13,19 @@ export default function Showcase() {
   const [allMeme, setAllMeme] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("https://api.imgflip.com/get_memes")
-      .then((res) => res.json())
-      .then((bigData) => {
-        // it will setAllMeme to array of 100 meme objects
-        setAllMeme(bigData.data.memes);
-      });
+    getData();
   }, []);
+
+  const getData = async () => {
+    try {
+      const response = await fetch("https://api.imgflip.com/get_memes");
+      const responseData = await response.json();
+      const memeData = responseData.data.memes;
+      setAllMeme(memeData);
+    } catch (error) {
+      console.log(`Error occured while fetching the meme data ${error}`);
+    }
+  };
 
   function handleChange(event) {
     let { name, value } = event.target;
@@ -36,7 +42,6 @@ export default function Showcase() {
     <section className="showcase">
       <div className="user-interactions">
         <div>
-
           <div className="input-field">
             <input
               type="text"
@@ -57,15 +62,17 @@ export default function Showcase() {
           <button onClick={getRandomImg} className="generate-img-btn">
             Give me a New Image !
           </button>
-         
-          <button onClick={() => download(captureRef.current)} className="download-btn">
+
+          <button
+            onClick={() => download(captureRef.current)}
+            className="download-btn"
+          >
             Download Meme
           </button>
         </div>
       </div>
 
-      <div className="meme-items" id="capture"
-        ref={captureRef} >
+      <div className="meme-items" id="capture" ref={captureRef}>
         <p className="top-text">{meme.topText}</p>
         <p className="bottom-text">{meme.bottomText}</p>
         <img
